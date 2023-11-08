@@ -16,7 +16,7 @@ const ProjectCard = ({ imageSrc, title, description, techStacks, link}) => {
 			color='black'
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			height="550px"
+			minHeight="500px"
 			justify="space-between"
 		>
 			<Box>
@@ -33,10 +33,11 @@ const ProjectCard = ({ imageSrc, title, description, techStacks, link}) => {
 						borderBottom="1px solid grey"
 					/>
 				</Box>
-				<VStack padding={3} alignItems="flex-start" spacing="15px">
+
+				<VStack padding={3} alignItems="flex-start" spacing="15px" fontSize='0.85rem'>
 					<Heading as='h6' fontSize='1.3rem' fontFamily={fonts.heading}>{title}</Heading>
 
-					<Text color='grey' fontFamily={fonts.paragrah} fontSize='0.9rem' >{description}</Text>
+					<Text color='grey' fontFamily={fonts.paragrah}>{description}</Text>
 
 					<Flex gap="5px" flexWrap="wrap">
 						{techStacks.map((techStack, index) => {
@@ -47,6 +48,7 @@ const ProjectCard = ({ imageSrc, title, description, techStacks, link}) => {
 					</Flex>
 				</VStack>
 			</Box>
+
 			<Flex justifyContent="end" paddingBottom="20px" justifyself="end">				
 				<CardLink url={link}>
 					{'Visit site '}
