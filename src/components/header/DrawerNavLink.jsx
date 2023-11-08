@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { useState } from "react";
-import { colorPallete } from "../../variables";
+import { colorPallete as cp } from "../../variables";
 
 
 const DrawerNavLink = ({children, ...props}) => {

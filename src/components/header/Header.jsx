@@ -123,7 +123,7 @@ const Header = () => {
                     </Box>
 
 
-                    <DrawerNav display={{base:"block", md:"none"}}/>
+                    <DrawerNav handleClick={handleClick} display={{base:"block", md:"none"}}/>
 
                     <Socials display={{base:"none", md:"flex"}} iconWidth="20px"/>
                 </HStack>
