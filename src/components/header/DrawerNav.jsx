@@ -39,6 +39,7 @@ const DrawerNav = ({handleClick, ...props}) => {
 				placement='right'
 				onClose={onClose}
 				finalFocusRef={btnRef}
+				zIndex="1001"
 			>
 			<DrawerOverlay />
 			<DrawerContent>
