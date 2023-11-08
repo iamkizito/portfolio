@@ -20,15 +20,21 @@ const ProjectCard = ({ imageSrc, title, description, techStacks, link}) => {
 			justify="space-between"
 		>
 			<Box>
-				<Image src={imageSrc} borderRadius={20} 
+				<Box className="image"
 					width='100%' 
 					height="250px"
 					transition="padding 0.2s ease-out"	
-					objectFit="cover"
-					paddingBottom={isHovered? "0px": "25px"}		
-				/>
+					paddingBottom={isHovered? "0px": "25px"}
+				>
+					<Image src={imageSrc} borderRadius={20} 
+						width='100%' 
+						height="100%"
+						objectFit="cover"
+						borderBottom="1px solid grey"
+					/>
+				</Box>
 				<VStack padding={3} alignItems="flex-start" spacing="15px">
-					<Heading as='h6' fontSize='1.5rem' fontFamily={fonts.heading}>{title}</Heading>
+					<Heading as='h6' fontSize='1.3rem' fontFamily={fonts.heading}>{title}</Heading>
 
 					<Text color='grey' fontFamily={fonts.paragrah} fontSize='0.9rem' >{description}</Text>
 

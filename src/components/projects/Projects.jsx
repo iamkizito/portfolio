@@ -8,14 +8,14 @@ const projects = [
 	{
 		title: "Little Lemon",
 		description:"An innovative web application designed to streamline the dining experience and allow users to effortlessly order their favorite dishes for takeout or dine-in and reserve tables in advance.",
-		getImageSrc: () => require("../../images/photo1.jpg"),
+		getImageSrc: () => require("../../images/littlelemon.jpg"),
 		techStacks: ['JavaScript', 'Html5', 'CSS', 'React.js', 'Chakra UI'],
 		link: "https://thelittlelemon.netlify.app",
 	},
 	{
 		title: "Anthony Obiora",
 		description:"A showcase of my professional journey, bringing together a collection of my best work and projects, skills and expertise in web development, design, and more",
-		getImageSrc: () => require("../../images/photo2.jpg"),
+		getImageSrc: () => require("../../images/anthonyobiora.jpg"),
 		techStacks: ['JavaScript', 'Html5', 'CSS', 'React.js', 'Chakra UI'],
 		link: "https://anthonyobiora.netlify.app",
 	},
