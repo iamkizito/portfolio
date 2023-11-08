@@ -10,7 +10,7 @@ const DrawerNavLink = ({children, ...props}) => {
         <Box
             style={{
                 display: 'block',
-                padding: "10px"
+                padding: "15px"
             }}
             bg={isPointerDown? cp.primary1: ''}
             onPointerDown={() => setIsPointerDown(true)}

@@ -5,28 +5,43 @@ import { Box, HStack, Flex } from "@chakra-ui/react";
 import { colorPallete as cp } from "../../variables";
 import DrawerNav from "./DrawerNav";
 
+import { 
+    faHouse,
+    faLaptopCode,
+    faAddressCard,
+    faBlog,
+    faNewspaper,
+} from "@fortawesome/free-solid-svg-icons"
+
+
 export const navLinks = [
     {
         name: "home",
-        url: "#home"
+        url: "#home",
+        icon: faHouse,
     },
     {
         name: "about",
-        url: "#about"
+        url: "#about",
+        icon: faNewspaper,
     },
     {
         name: "projects",
-        url: "#projects"
+        url: "#projects",
+        icon: faLaptopCode,
     },
     {
         name: "blog",
-        url: "#blog"
+        url: "#blog",
+        icon: faBlog,
     },
     {
         name: "contact",
-        url: "#contact"
+        url: "#contact",
+        icon: faAddressCard,
     },
 ]
+
 
 
 const Header = () => {

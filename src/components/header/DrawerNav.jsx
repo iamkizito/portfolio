@@ -43,7 +43,7 @@ const DrawerNav = ({handleClick, ...props}) => {
 			<DrawerOverlay />
 			<DrawerContent>
 				<DrawerCloseButton />
-				<DrawerHeader>Navigation</DrawerHeader>
+				<DrawerHeader>Main Menu</DrawerHeader>
 	
 				<DrawerBody display="block"> 
 					{navLinks.map((navLink, index) => {
@@ -51,6 +51,7 @@ const DrawerNav = ({handleClick, ...props}) => {
 							<DrawerNavLink key={index} data-testid={`${navLink.name}_nav`}
 								onClick={() => clickHandler(navLink.url.split('#')[1])}
 							> 
+								<FontAwesomeIcon style={{marginRight:"10px"}} icon={navLink.icon}/>
 								{navLink.name[0].toUpperCase() + navLink.name.slice(1).toLowerCase()}
 							</DrawerNavLink>
 						)              

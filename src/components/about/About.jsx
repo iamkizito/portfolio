@@ -60,7 +60,7 @@ const About = () => {
                         fontSize="1.1rem"
                         fontFamily={fonts.heading}
                     >
-                        My Skills
+                        Skills
                     </ Box>
                     <Flex gap="15px" fontFamily={fonts.paragrah} flexWrap="wrap" padding={{base:"0 20px 30px", md:"0px"}}>
                         {skills.map((skill, index) => {
