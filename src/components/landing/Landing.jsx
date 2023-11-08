@@ -3,10 +3,11 @@ import { Image, Heading, VStack, Text, Box, Flex } from "@chakra-ui/react";
 import FullScreenSection from "../FullScreenSection";
 import { useState, useEffect } from "react";
 import { fonts, colorPallete as cp } from "../../variables";
+import passport from "../../images/passport.jpg"
 
 const greeting = "Hello there, I'm Anthony Obiora!";
-const bio1 = "A frontend developer";
-const bio2 = "specialized in React";
+const bio1 = "A Web developer";
+const bio2 = "";
 
 
 const Landing = () => {
@@ -39,12 +40,14 @@ const Landing = () => {
 		>
 			<FullScreenSection>
 				<Flex direction="column" gap="20px" align="center" justify="center">
-					<Image position='unset' src='https://i.pravatar.cc/150?img=7' 
+					<Image position='unset' src={passport}
 						width="200px" 
 						height="200px" 
 						objectFit="cover"
+						objectPosition= "center 10%"
 						borderRadius="50%"
 					/>
+
 					<Flex as="span" marginBottom={5} fontSize={{base:"1.1rem", md:"1.5rem"}} justify="center">
 						{greetingText} 
 						<Cursor><Box bg="black" width="3px" height="30px"></Box></Cursor>

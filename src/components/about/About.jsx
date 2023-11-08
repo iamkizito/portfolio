@@ -3,6 +3,7 @@ import FullScreenSection from "../FullScreenSection";
 import FlipOnHover from "./FlipOnHover";
 import { fonts } from "../../variables";
 import { useScrollSpy } from "../../context/scrollSpyContext";
+import gradImage from '../../images/grad-image.jpg'
 
 
 
@@ -22,7 +23,7 @@ const About = () => {
                 <Box as="h1" className="heading" fontSize="1.5rem" fontWeight="bold" padding={{base:"20px 0", md:"50px 0"}}
                     fontFamily={fonts.heading}
                 >
-                    About Me
+                    About
                 </ Box>
                 <Grid className="details"
                     gridTemplateColumns={{base:"1fr", md:"1fr 1fr"}}
@@ -39,13 +40,13 @@ const About = () => {
                         >
                             Hover Me !
                         </Flex>
-                        <Image className="back-face" bg="blue" width="300px" height="400px" src="https://robohash.org/7.png?size=150x150"/>
+                        <Image className="back-face" bg="blue" width="300px" height="400px" objectFit="cover" src={gradImage}/>
                     </FlipOnHover>
                     <Box className="content" maxWidth="500px" fontFamily={fonts.paragrah} padding="20px" textAlign="justify">
-                        <Box as="p">
+                        <Box as="p" marginBottom="20px">
                             Welcome to my portfolio app, a dynamic platform that offers an in-depth glimpse into my creative and technical journey. As a web developer and designer, I've harnessed my skills to craft this space, where you'll find a curated selection of my most impactful projects, each a testament to my commitment to excellence and innovation.
                         </Box>
-                        <Box as="p">
+                        <Box as="p" marginBottom="20px">
                             Explore a diverse range of work that spans web development, design, and more. Whether it's crafting intuitive user interfaces, building robust web applications, or designing visually captivating experiences, I've left no stone unturned in my quest to create meaningful and impactful digital solutions.
                         </Box>
                         <Box as="p">
@@ -61,7 +62,7 @@ const About = () => {
                     >
                         My Skills
                     </ Box>
-                    <Flex gap="15px" fontFamily={fonts.paragrah} flexWrap="wrap" padding={{base:"0 20px", md:"0px"}}>
+                    <Flex gap="15px" fontFamily={fonts.paragrah} flexWrap="wrap" padding={{base:"0 20px 30px", md:"0px"}}>
                         {skills.map((skill, index) => {
                             return (
                                 <Box key={index} className="skill">※ {skill}</Box>
