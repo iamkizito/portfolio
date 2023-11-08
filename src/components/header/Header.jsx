@@ -94,6 +94,7 @@ const Header = () => {
             backgroundColor="#18181b"
             ref={headerRef}
             width="100vw"
+            zIndex="100000"
         >
             <Box color="white" maxWidth="1280px" margin="0 auto" fontFamily="Lora, cursive">
                 <HStack
