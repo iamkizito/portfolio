@@ -2,7 +2,7 @@ import { useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import { colorPallete as cp } from "../../variables";
-import ContactForm from "./Contactform";
+import ContactForm from "./ContactForm";
 
 import {
     Modal,
@@ -35,7 +35,7 @@ const FormModal = ({...props}) => {
   
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent>
+            <ModalContent width="95%">
                 <ModalHeader textAlign="center">Message Form</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody paddingBottom="30px">
