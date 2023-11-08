@@ -42,7 +42,15 @@ const About = () => {
                         <Image className="back-face" bg="blue" width="300px" height="400px" src="https://robohash.org/7.png?size=150x150"/>
                     </FlipOnHover>
                     <Box className="content" maxWidth="500px" fontFamily={fonts.paragrah} padding="20px" textAlign="justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ab modi sapiente placeat asperiores, voluptatum optio ea ullam dicta accusantium deserunt quidem odit dolore officia quasi distinctio. Cum dicta veritatis ullam natus autem reiciendis nisi similique in quia quasi eligendi placeat culpa doloremque ratione, maxime cumque perferendis reprehenderit aperiam. Unde eos laudantium vel saepe mollitia quam dolores repellat sequi adipisci corporis necessitatibus blanditiis quidem totam, illo, a iste, dolorem eius qui tenetur dignissimos dolorum asperiores nesciunt vitae. Placeat libero inventore minus autem illo blanditiis aspernatur odio, hic optio sequi ad sed odit tempora deserunt, perspiciatis ipsum corrupti, ullam asperiores dolorum!
+                        <Box as="p">
+                            Welcome to my portfolio app, a dynamic platform that offers an in-depth glimpse into my creative and technical journey. As a web developer and designer, I've harnessed my skills to craft this space, where you'll find a curated selection of my most impactful projects, each a testament to my commitment to excellence and innovation.
+                        </Box>
+                        <Box as="p">
+                            Explore a diverse range of work that spans web development, design, and more. Whether it's crafting intuitive user interfaces, building robust web applications, or designing visually captivating experiences, I've left no stone unturned in my quest to create meaningful and impactful digital solutions.
+                        </Box>
+                        <Box as="p">
+                            Through this app, I invite you to delve into my world, where passion meets precision, creativity blends with functionality, and every project tells a unique story. Join me on this journey as we navigate the art and science of the digital realm, and discover how I can bring value to your next project.
+                        </Box>
                     </Box>
                 </Grid>
                 <Flex flexDirection="column" align="center" justify="center">

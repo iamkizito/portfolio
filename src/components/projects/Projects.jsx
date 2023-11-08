@@ -6,32 +6,32 @@ import { fonts, colorPallete as cp } from "../../variables";
 
 const projects = [
 	{
-		title: "React Space",
-		description:"Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+		title: "Little Lemon",
+		description:"An innovative web application designed to streamline the dining experience and allow users to effortlessly order their favorite dishes for takeout or dine-in and reserve tables in advance.",
 		getImageSrc: () => require("../../images/photo1.jpg"),
 		techStacks: ['JavaScript', 'Html5', 'CSS', 'React.js', 'Chakra UI'],
-		link: "https://",
+		link: "https://thelittlelemon.netlify.app",
 	},
 	{
-		title: "React Infinite Scroll",
-		description:"A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+		title: "Anthony Obiora",
+		description:"A showcase of my professional journey, bringing together a collection of my best work and projects, skills and expertise in web development, design, and more",
 		getImageSrc: () => require("../../images/photo2.jpg"),
 		techStacks: ['JavaScript', 'Html5', 'CSS', 'React.js', 'Chakra UI'],
-		link: "https://",
+		link: "https://anthonyobiora.netlify.app",
 	},
 	{
-		title: "Photo Gallery",
-		description:"A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
+		title: "Booking code converter",
+		description:"All-in-one solution for effortlessly translating booking codes between various sports betting platforms. Whether you're switching platforms, comparing odds, or seeking the best value for your bets, our app simplifies the process",
 		getImageSrc: () => require("../../images/photo3.jpg"),
-		techStacks: ['JavaScript', 'Html5', 'CSS', 'React.js', 'Chakra UI'],
+		techStacks: ['JavaScript', 'Html5', 'CSS', 'SASS', 'Python', 'Django'],
 		link: "https://",
 	},
 	{
-		title: "Event planner",
-		description:"A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
+		title: "OurSports",
+		description:"A vibrant online hub where sports lovers and enthusiasts unite to connect, access, share, and engage in the exhilarating world of sports events and activities, and also indulge in spirited discussions and speculations surrounding the world of sports",
 		getImageSrc: () => require("../../images/photo4.jpg"),
-		techStacks: ['JavaScript', 'Html5', 'CSS', 'React.js', 'Chakra UI'],
-		link: "https://",
+		techStacks: ['JavaScript', 'Html5', 'CSS', 'SASS', 'Python', 'Flask'],
+		link: "https://youtu.be/LSqNVdzubWE",
 	},
 ];
 
