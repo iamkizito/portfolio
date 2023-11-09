@@ -14,7 +14,7 @@ const MoreButton = ({children, ...props}) => {
             borderRadius="16px"
             border={`1px solid ${cp.secondary1}`}
             color={isHovered ? 'white' : ''}
-            backgroundColor={isHovered ? 'grey' : cp.secondary1}
+            style={{backgroundColor: isHovered ? 'grey' : cp.secondary1}}  
             {...props}
         >
             {children}
