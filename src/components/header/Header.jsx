@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 
-export const navLinks = [
+export const navLinksList = [
     {
         name: "home",
         url: "#home",
@@ -111,7 +111,7 @@ const Header = () => {
                     </Flex>
                     <Box as="nav" display={{base:"none", md:"flex"}}>
                         <HStack spacing={8}>
-                            {navLinks.map((navLink, index) => {
+                            {navLinksList.map((navLink, index) => {
                                 return (                          
                                     <NavLink key={index} data-testid={`${navLink.name}_nav`}
                                         onClick={() => handleClick(navLink.url.split('#')[1])}
@@ -124,7 +124,11 @@ const Header = () => {
                     </Box>
 
 
-                    <DrawerNav handleClick={handleClick} display={{base:"block", md:"none"}}/>
+                    <DrawerNav 
+                        handleClick={handleClick} 
+                        display={{base:"block", md:"none"}}
+                        navLinksList={navLinksList}
+                    />
 
                     <Socials 
                         display={{base:"none", md:"flex"}} 

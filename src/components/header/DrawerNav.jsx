@@ -10,7 +10,6 @@ import {
 import { useDisclosure } from '@chakra-ui/react';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { navLinks } from './Header';
 import DrawerNavLink from './DrawerNavLink';
 import { useRef } from 'react';
 import { Button } from '@chakra-ui/react';
@@ -19,7 +18,7 @@ import { Box } from '@chakra-ui/react';
 
 
 
-const DrawerNav = ({handleClick, ...props}) => {
+const DrawerNav = ({handleClick, navLinksList, ...props}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
 	
@@ -30,7 +29,7 @@ const DrawerNav = ({handleClick, ...props}) => {
   
     return (
 		<Box {...props}>
-			<Button ref={btnRef} bg={cp.primary1} color="white" onClick={onOpen}>
+			<Button ref={btnRef} bg={cp.primary1} color="white" onClick={onOpen} data-testid="trigger-button">
 				<FontAwesomeIcon icon={faBars}/>
 			</Button>
 
@@ -42,14 +41,14 @@ const DrawerNav = ({handleClick, ...props}) => {
 				zIndex="1001"
 			>
 			<DrawerOverlay />
-			<DrawerContent>
+			<DrawerContent data-testid="drawer-nav">
 				<DrawerCloseButton />
 				<DrawerHeader>Main Menu</DrawerHeader>
 	
 				<DrawerBody display="block"> 
-					{navLinks.map((navLink, index) => {
+					{navLinksList.map((navLink, index) => {
 						return (                          
-							<DrawerNavLink key={index} data-testid={`${navLink.name}_nav`}
+							<DrawerNavLink key={index}
 								onClick={() => clickHandler(navLink.url.split('#')[1])}
 							> 
 								<FontAwesomeIcon style={{marginRight:"10px"}} icon={navLink.icon}/>

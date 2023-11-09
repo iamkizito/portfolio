@@ -15,6 +15,7 @@ const DrawerNavLink = ({children, ...props}) => {
             bg={isPointerDown? cp.primary1: ''}
             onPointerDown={() => setIsPointerDown(true)}
             onPointerUp={() => setIsPointerDown(false)}
+            data-testid="drawer-nav-link"
             {...props}
         >
             {children}
