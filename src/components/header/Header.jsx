@@ -4,6 +4,7 @@ import Socials from "./Socials";
 import { Box, HStack, Flex } from "@chakra-ui/react";
 import { colorPallete as cp } from "../../variables";
 import DrawerNav from "./DrawerNav";
+import { socialMediaList } from "./Socials";
 
 import { 
     faHouse,
@@ -125,7 +126,11 @@ const Header = () => {
 
                     <DrawerNav handleClick={handleClick} display={{base:"block", md:"none"}}/>
 
-                    <Socials display={{base:"none", md:"flex"}} iconWidth="20px"/>
+                    <Socials 
+                        display={{base:"none", md:"flex"}} 
+                        iconWidth="20px"
+                        socialMediaList={socialMediaList}
+                    />
                 </HStack>
             </Box>
         </Box>

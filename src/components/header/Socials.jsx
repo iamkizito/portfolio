@@ -11,7 +11,7 @@ import { Box, HStack } from "@chakra-ui/react";
 import { colorPallete as cp } from "../../variables";
 
 
-const socials = [
+export const socialMediaList = [
     {
         icon: faEnvelope,
         url: "mailto: hello@example.com",
@@ -36,10 +36,10 @@ const socials = [
 
 
 
-const Socials = ({iconWidth, ...props}) => {
+const Socials = ({iconWidth, socialMediaList, ...props}) => {
     return (
         <HStack spacing={5} {...props}>
-            {socials.map((social, index) => {
+            {socialMediaList.map((social, index) => {
                 return (
                     <Social 
                         key={index}
@@ -58,7 +58,7 @@ export default Socials;
 
 
 
-const Social = ({href, icon, ...props}) => {
+export const Social = ({href, icon, ...props}) => {
     const [isHovered, setIsHovered] = useState(false)
 
     return (
@@ -67,6 +67,7 @@ const Social = ({href, icon, ...props}) => {
             onMouseLeave={() => setIsHovered(false)}
             cursor="pointer"
             color = {isHovered? cp.secondary1 : ""}
+            role="social-media-link"
             {...props}
         >
             <FontAwesomeIcon icon={icon} style={{width:"100%", height:"100%", objectFit:"cover"}} />
