@@ -56,7 +56,7 @@ const ContactForm = () => {
 
     return (
 
-        <Box as="form" onSubmit={formik.handleSubmit}>
+        <Box as="form" onSubmit={formik.handleSubmit} role="contact-form">
             <VStack spacing={4}>
                 <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
                     <FormLabel htmlFor="firstName">Name</FormLabel>
