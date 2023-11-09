@@ -1,11 +1,10 @@
-import { Heading, HStack, Image, Text, VStack, Flex, Box } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { fonts, colorPallete as cp} from "../../variables";
 import { useState } from "react";
 
 
-const ContactCard = ({ icon, name, values}) => {
+const ContactCard = ({icon, name, values}) => {
 	const [isHovered, setIsHovered] = useState(false)
 
 	return (
@@ -20,6 +19,7 @@ const ContactCard = ({ icon, name, values}) => {
 			justify="center"
 			align="center"
             fontFamily={fonts.heading}
+            role="contact-card"
 		>
 			<Flex direction="column" align="center" gap="15px">
                 <Box
@@ -27,8 +27,9 @@ const ContactCard = ({ icon, name, values}) => {
                     height="60px"
                     padding={isHovered ? "0px": "15px"}
                     transition="padding 0.2s ease-out"
+                    data-testid="icon-box" 
                 >
-                    <FontAwesomeIcon icon={icon}                 
+                    <FontAwesomeIcon icon={icon}              
                         style={{width:"100%",height:"100%", objectFit:"cover"}}
                     />
                 </Box>
