@@ -8,9 +8,12 @@ const FlipOnHover = ({children, ...props}) => {
     const childrenArray = React.Children.toArray(children);
     const front = childrenArray[0];
     const back = childrenArray[1];
-    console.log(front)
-    console.log(back)
 
+    const flipped = `
+        .flipped {
+            transform: rotateY(180deg)
+        }
+    `
 
     return (
         <>
@@ -25,14 +28,24 @@ const FlipOnHover = ({children, ...props}) => {
                 position="relative"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                style={{transformStyle: 'preserve-3d'}}
-                transform={isHovered ? "rotateY(180deg)" : "rotateY(0deg)"}
+                style={{
+                    transformStyle: 'preserve-3d',
+                    transform: isHovered ? "rotateY(180deg)" : "rotateY(0deg)"
+                }}
                 transition="transform 0.5s linear" 
                 width="100%"   
-                height="100%"   
+                height="100%" 
+                data-testid="on-hover-container" 
+                css={flipped} 
             >
-                <Face>{back}</Face>
-                <Face style = {{backfaceVisibility: "hidden"}} transform="rotateY(360deg)">{front}</Face>
+                <Face data-testid="back-face">{back}</Face>
+                <Face 
+                    data-testid="front-face"
+                    style = {{backfaceVisibility: "hidden"}}
+                    transform="rotateY(360deg)"
+                >
+                    {front}
+                </Face>
             </Box>
         </Box>
 
