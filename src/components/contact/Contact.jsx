@@ -5,6 +5,7 @@ import { fonts, colorPallete as cp } from "../../variables";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import ContactCard from "./ContactCard";
 import FormModal from "./FormModal";
+import ContactForm from "./ContactForm";
 
 const contactList = [
 	{
@@ -54,7 +55,9 @@ const Contact = () => {
                 </Box>
 
                 <Flex justifyContent="end" paddingTop="50px" justifyself="end">				
-                    <FormModal/>
+                    <FormModal>
+                        <ContactForm/>
+                    </FormModal>
                 </Flex>
             </FullScreenSection>
         </Flex>

@@ -2,44 +2,43 @@ import { useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import { colorPallete as cp } from "../../variables";
-import ContactForm from "./ContactForm";
 
 import {
     Modal,
     ModalOverlay,
     ModalContent,
     ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react';
 
-const FormModal = ({...props}) => {
+const FormModal = ({children, ...props}) => {
     const [isHovered, setIsHovered] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
       <Box {...props}>
-        <Box as="button" onClick={onOpen}
+        <Button
+            onClick={onOpen}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             cursor="pointer"
             padding="10px"
             borderRadius="16px"
             border={`1px solid ${cp.secondary1}`}
-            color={isHovered ? 'white' : ''}
+            color="black"
             backgroundColor={isHovered ? 'grey' : cp.secondary1}
         >
             Leave me a message
-        </Box>
+        </Button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent width="95%">
+            <ModalContent width="95%" data-testid="modal">
                 <ModalHeader textAlign="center">Message Form</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody paddingBottom="30px">
-                    <ContactForm/>
+                    {children}
                 </ModalBody>
             </ModalContent>
         </Modal>
