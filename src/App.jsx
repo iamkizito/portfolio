@@ -8,6 +8,8 @@ import { ScrollSpyProvider } from "./context/scrollSpyContext";
 import Projects from "./components/projects/Projects";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
+import LottoTable from "./components/lotto/LottoTable";
+import { Test } from "./components/lotto/Test";
 
 function App() {
 	return (
@@ -20,6 +22,8 @@ function App() {
 						<About/>
 						<Projects />
 						<Contact />
+						{/* <LottoTable/> */}
+						<Test/>
 						<Footer />
 						<Alert />
 					</main>
