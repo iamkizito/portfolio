@@ -39,7 +39,8 @@ const Landing = () => {
 			color="white"
 		>
 			<FullScreenSection>
-				<Flex direction="column" gap="20px" align="center" justify="center">
+				<Flex direction="column" gap="20px" align="center" justify="center" 
+					style={{fontStyle:"italic", fontFamily:"Lora, cursive"}}>
 					<Image position='unset' src={passport}
 						width="200px" 
 						height="200px" 
@@ -60,10 +61,11 @@ const Landing = () => {
 							transform="translateX(-50%)"
 							animation="slideUp 1s ease-out"
 							css={slideUp}	
-							
+							fontStyle="italic" 
+							fontFamily="Lora, cursive"						
 						>
-							<Heading style={{textWrap:"nowrap"}} as='h1'>{bio1}</Heading>
-							<Heading as='h1'>{bio2}</Heading>
+							<Heading as='h1' style={{textWrap:"nowrap"}}>{bio1}</Heading>
+							<Heading as='h1' >{bio2}</Heading>
 						</Box>
 					</Box>
 				</Flex>

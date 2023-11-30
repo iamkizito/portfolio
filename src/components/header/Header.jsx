@@ -104,7 +104,7 @@ const Header = () => {
                     justifyContent="space-between"
                     alignItems="center"
                 >
-                    <Flex fontSize="1.4rem" fontWeight="bold">
+                    <Flex fontSize="1.4rem" fontWeight="bold" fontStyle="italic">
                         <Box color={cp.primary1}>Anthony</Box>
                         <Box color={cp.highlight1}>.</Box>
                         <Box color={cp.secondary1}>Obiora</Box>

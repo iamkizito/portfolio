@@ -9,27 +9,38 @@ import Projects from "./components/projects/Projects";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
 import LottoTable from "./components/lotto/LottoTable";
-import { Test } from "./components/lotto/Test";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function Home () {
+	return (
+		<>
+		<Header />
+		<Landing />
+		<About/>
+		<Projects />
+		<Contact />
+		<Footer />
+		<Alert />
+		</>
+	)
+}
 
 function App() {
 	return (
-		<ChakraProvider>
-			<AlertProvider>
-				<ScrollSpyProvider>
-					<main>
-						<Header />
-						<Landing />
-						<About/>
-						<Projects />
-						<Contact />
-						{/* <LottoTable/> */}
-						<Test/>
-						<Footer />
-						<Alert />
-					</main>
-				</ScrollSpyProvider>
-			</AlertProvider>
-		</ChakraProvider>
+		<BrowserRouter>
+			<ChakraProvider>
+				<AlertProvider>
+					<ScrollSpyProvider>
+						<main>
+							<Routes>
+								<Route path="/" element={<Home/>}/>
+								<Route path="/lotto" element={<LottoTable/>}/>
+							</Routes>
+						</main>
+					</ScrollSpyProvider>
+				</AlertProvider>
+			</ChakraProvider>
+		</BrowserRouter>
 	);
 }
 
