@@ -1,5 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { generateHistoricalDraw } from "./Helper";
+import { generateHistoricalDraw } from "./helper";
 import { useEffect, useState, useRef} from "react";
 import {HeadRow, BodyRow} from './Rows';
 import {Line} from './Number'
