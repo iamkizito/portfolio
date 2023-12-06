@@ -9,6 +9,7 @@ import Projects from "./components/projects/Projects";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
 import LottoTable from "./components/lotto/LottoTable";
+import LuckySpin from "./components/spin/LuckySpin";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function Home () {
@@ -35,6 +36,7 @@ function App() {
 							<Routes>
 								<Route path="/" element={<Home/>}/>
 								<Route path="/lotto" element={<LottoTable/>}/>
+								<Route path="/luckyspin" element={<LuckySpin/>}/>
 							</Routes>
 						</main>
 					</ScrollSpyProvider>
