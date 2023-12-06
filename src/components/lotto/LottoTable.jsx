@@ -32,9 +32,11 @@ const LottoTable = () => {
 
 
     return (
-        <Box className="container"
-            width="100%"
+        <Flex className="container"
+            width="100vw"
+            height="100vh"
             overflowX="scroll"
+            align="center"
         >
             <Box as="table" ref={tableRef} position="relative">
                 <thead>
@@ -71,29 +73,7 @@ const LottoTable = () => {
                     })}
                 </Box>
             </Box>
-        </Box>
-
-        // <Box as="table" style={{border: "1px solid black"}}>
-        //     <thead style={{border: "1px solid black"}}>
-        //         <Box as="tr" style={{border: "1px solid black"}}>
-        //             <Box as="td" style={{border: "1px solid black"}}>10</Box>
-        //             <Box as="td" style={{border: "1px solid black"}}>10</Box>
-        //             <Box as="td" style={{border: "1px solid black"}}>10</Box>
-        //         </Box>
-        //     </thead>
-        //     <tbody style={{border: "1px solid black"}}>
-        //         <Box as="tr" style={{border: "1px solid black"}}>
-        //             <td style={{border: "1px solid black"}}>10</td>
-        //             <td style={{border: "1px solid black"}}>10</td>
-        //             <td style={{border: "1px solid black"}}>10</td>
-        //         </Box>
-        //         <Box as="tr" style={{border: "1px solid black"}}>
-        //             <td style={{border: "1px solid black"}}>10</td>
-        //             <td style={{border: "1px solid black"}}>10</td>
-        //             <td style={{border: "1px solid black"}}>10</td>
-        //         </Box>
-        //     </tbody>
-        // </Box>
+        </Flex>
     )
 }
 
