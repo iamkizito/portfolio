@@ -8,6 +8,7 @@ import { ScrollSpyProvider } from "./context/scrollSpyContext";
 import Projects from "./components/projects/Projects";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
+import RotatingCube from "./components/cube/RotatingCube";
 import LottoTable from "./components/lotto/LottoTable";
 import LuckySpin from "./components/spin/LuckySpin";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -35,8 +36,9 @@ function App() {
 						<main>
 							<Routes>
 								<Route path="/" element={<Home/>}/>
+								<Route path="/cube" element={<RotatingCube/>}/>
 								<Route path="/lotto" element={<LottoTable/>}/>
-								<Route path="/luckyspin" element={<LuckySpin/>}/>
+								<Route path="/spin" element={<LuckySpin/>}/>
 							</Routes>
 						</main>
 					</ScrollSpyProvider>

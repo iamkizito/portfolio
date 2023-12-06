@@ -20,13 +20,18 @@ const LuckySpin = () => {
     }
 
     return (
-        <Box>
-            <Flex
-                justify="center"
-            >
+        <Flex
+            width="100vw"
+            height="100vh"
+            justify="center"
+            align="center"
+        >
+            <Box>
                 <RingLight 
                     radius={radius} 
                     position="relative"
+                    display="flex"
+                    justify="center"
                 >
                     <Wheel 
                         toDeg={spinnerPosition}
@@ -40,11 +45,11 @@ const LuckySpin = () => {
                         top="160px"
                     />
                 </RingLight>
-    
-            </Flex>
-            <Box className="spin_count_remaining">Remaining Spin: {luckySpinsCount}</Box>
-            <Button onClick={handleSpin}>Spin</Button>
-        </Box>
+
+                <Box className="spin_count_remaining">Remaining Spin: {luckySpinsCount}</Box>
+                <Button onClick={handleSpin}>Spin</Button>
+            </Box>
+        </Flex>
 
     )
 }

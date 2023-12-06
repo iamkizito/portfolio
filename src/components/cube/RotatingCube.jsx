@@ -4,7 +4,13 @@ import { Flex, Box } from "@chakra-ui/react";
 const RotatingCube = () => {
 
     return (
-        <Flex id="bouncing" justify="center" align="center">
+        <Flex 
+            id="bouncing" 
+            justify="center" 
+            align="center"
+            width="100vw"
+            height="100vh"
+        >
             <Flex className="scene" perspective="10px">
                 <Cube size="100px"/>
             </Flex>  
